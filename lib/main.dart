@@ -1,4 +1,5 @@
 import 'package:core/src/app.dart';
+import 'package:core/src/screen/google_detail.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -12,6 +13,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      routes: {
+        "/detail": (context) => GoogleDetail(),
+      },
       home: MainPage(title: 'Phsar Somnong'),
     );
   }

@@ -116,8 +116,13 @@ class __AccountState extends State<Account> {
       color: Colors.blue,
       child: Text("Login with Google", style: TextStyle(color: Colors.white)),
       onPressed: () {
-        signInWithGoogle().whenComplete(() {
-          MaterialPageRoute(builder :  (context) {
+        signInWithGoogle().catchError((error) {
+          print("error $error");
+        }).then((onvalue) {
+          print("then onvalue $onvalue");
+          Navigator.pushNamed(context, "detail");
+        }).whenComplete(() {
+          MaterialPageRoute(builder: (context) {
             return GoogleDetail();
           });
         });
