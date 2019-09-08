@@ -22,10 +22,10 @@ class _MainPageState extends State<MainPage> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
   List<Widget> _widgetOptions = <Widget>[
+    Account(),
     Home(),
     Business(),
     School(),
-    Account(),
     Setting(),
   ];
 
@@ -54,6 +54,10 @@ class _MainPageState extends State<MainPage> {
           bottomNavigationBar: BottomNavigationBar(
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                title: Text("Account"),
+              ),
+              BottomNavigationBarItem(
                   icon: Icon(Icons.home),
                   title: Text('Home'),
                   backgroundColor: Colors.white),
@@ -64,10 +68,6 @@ class _MainPageState extends State<MainPage> {
               BottomNavigationBarItem(
                 icon: Icon(Icons.school),
                 title: Text('School'),
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                title: Text("Account"),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.settings),
